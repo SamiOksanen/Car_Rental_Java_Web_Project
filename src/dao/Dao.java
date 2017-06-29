@@ -25,13 +25,13 @@ public class Dao {
 		Connection tietokantayhteys = null;
 
 		String JDBCAjuri = "org.mariadb.jdbc.Driver";
-		String url = "jdbc:mariadb://localhost:3306/a1500907";
+		String url = "jdbc:mariadb://localhost:3306/USERNAME";
 
 		try {
-			Class.forName(JDBCAjuri); // ajurin m√§√§ritys
+			Class.forName(JDBCAjuri); // ajurin m√É¬§√É¬§ritys
 
 			// otetaan yhteys tietokantaan
-			tietokantayhteys = DriverManager.getConnection(url, "a1500907","baQE2025e");
+			tietokantayhteys = DriverManager.getConnection(url, "USERNAME","PASSWORD");
 
 			// yhteyden otto onnistu
 		} catch (SQLException sqlE) {
@@ -83,7 +83,7 @@ public class Dao {
 	        if (conn != null)  	{
 	        	// aloita transsaktio, ensin automaattinen commitointi pois 
 	        	conn.setAutoCommit(false);
-	        	// laita eristyvyystaso p‰‰lle
+	        	// laita eristyvyystaso p√§√§lle
 	        	conn.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
 	       
 	        	preparedStatement = conn.prepareStatement(sql);
@@ -92,7 +92,7 @@ public class Dao {
 	        		
 	        	// sulje preparedStatement
 	        	preparedStatement.close();
-	        	// p‰‰t‰ transaktio hyv‰ksym‰ll‰
+	        	// p√§√§t√§ transaktio hyv√§ksym√§ll√§
 	        	conn.commit();
 	        	// sulje yhteys kantaa
 	        	conn.close();
@@ -114,7 +114,7 @@ public class Dao {
 	        			
 		        	tulosjoukko.close();
 	            }
-		        else  // vuokrauksia ei lˆytynyt
+		        else  // vuokrauksia ei l√∂ytynyt
 		        {
 		        		lista = null;
 		        }
@@ -168,7 +168,7 @@ public class Dao {
 	        if (conn != null)  	{
 	        	// aloita transsaktio, ensin automaattinen commitointi pois 
 	        	conn.setAutoCommit(false);
-	        	// laita eristyvyystaso p‰‰lle
+	        	// laita eristyvyystaso p√§√§lle
 	        	conn.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
 	       
 	        	preparedStatement = conn.prepareStatement(sql);
@@ -179,7 +179,7 @@ public class Dao {
 	        		
 	        	// sulje preparedStatement
 	        	preparedStatement.close();
-	        	// p‰‰t‰ transaktio hyv‰ksym‰ll‰
+	        	// p√§√§t√§ transaktio hyv√§ksym√§ll√§
 	        	conn.commit();
 	        	// sulje yhteys kantaa
 	        	conn.close();
@@ -202,7 +202,7 @@ public class Dao {
 	        			
 		        	tulosjoukko.close();
 	            }
-		        else  // vuokrauksia ei lˆytynyt
+		        else  // vuokrauksia ei l√∂ytynyt
 		        {
 		        		lista = null;
 		        }
@@ -345,7 +345,7 @@ public class Dao {
 		        	{
 		        		// aloita transsaktio, ensin automaattinen commitointi pois 
 		        		conn.setAutoCommit(false);
-		        		// laita eristyvyystaso p‰‰lle
+		        		// laita eristyvyystaso p√§√§lle
 		        		conn.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
 		       
 		        		preparedStatement = conn.prepareStatement(sql);
@@ -355,7 +355,7 @@ public class Dao {
 		        		
 		        		// sulje preparedStatement
 		        		preparedStatement.close();
-		        		// p‰‰t‰ transaktio hyv‰ksym‰ll‰
+		        		// p√§√§t√§ transaktio hyv√§ksym√§ll√§
 		        		conn.commit();
 		        		// sulje yhteys kantaa
 		        		conn.close();
@@ -366,7 +366,7 @@ public class Dao {
 			        		tulosjoukko.close();
 			        		
 			        	}
-			        	else  // autoa ei lˆytynyt
+			        	else  // autoa ei l√∂ytynyt
 			        	{
 			        		auto = null;
 			        	}
@@ -412,7 +412,7 @@ public class Dao {
         	{
         		// aloita transsaktio, ensin automaattinen commitointi pois 
         		conn.setAutoCommit(false);
-        		// laita eristyvyystaso p‰‰lle
+        		// laita eristyvyystaso p√§√§lle
         		conn.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
        
         		preparedStatement = conn.prepareStatement(sql);
@@ -422,7 +422,7 @@ public class Dao {
         		
         		// sulje preparedStatement
         		preparedStatement.close();
-        		// p‰‰t‰ transaktio hyv‰ksym‰ll‰
+        		// p√§√§t√§ transaktio hyv√§ksym√§ll√§
         		conn.commit();
         		// sulje yhteys kantaa
         		conn.close();
@@ -443,7 +443,7 @@ public class Dao {
 	        		tulosjoukko.close();
 	        		
 	        	}
-	        	else  // autoja ei lˆytynyt
+	        	else  // autoja ei l√∂ytynyt
 	        	{
 	        		lista = null;
 	        	}
@@ -484,7 +484,7 @@ public class Dao {
 	        	{
 	        		// aloita transaktion ensin automaattinen commitointi pois 
 	        		conn.setAutoCommit(false);
-	        		// laita eristyvyystaso p‰‰lle
+	        		// laita eristyvyystaso p√§√§lle
 	        		conn.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
 	       
 	        		preparedStatement = conn.prepareStatement(sql);
@@ -495,7 +495,7 @@ public class Dao {
 	        		
 	        		// sulje preparedStatement
 	        		preparedStatement.close();
-	        		// p‰‰t‰ transaktio hyv‰ksym‰ll‰
+	        		// p√§√§t√§ transaktio hyv√§ksym√§ll√§
 	        		conn.commit();
 	        		// sulje yhteys kantaa
 	        		conn.close();
@@ -508,7 +508,7 @@ public class Dao {
 		        		tulosjoukko.close();
 		        		
 		        	}
-		        	else  // asiakas ei lˆytynyt
+		        	else  // asiakas ei l√∂ytynyt
 		        	{
 		        		asiakas = null;
 		        		
@@ -549,7 +549,7 @@ public class Dao {
 	        	{
 	        		// aloita transsaktio, ensin automaattinen commitointi pois 
 	        		conn.setAutoCommit(false);
-	        		// laita eristyvyystaso p‰‰lle
+	        		// laita eristyvyystaso p√§√§lle
 	        		conn.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
 	       
 	        		preparedStatement = conn.prepareStatement(sql);
@@ -558,7 +558,7 @@ public class Dao {
 	        		
 	        		// sulje preparedStatement
 	        		preparedStatement.close();
-	        		// p‰‰t‰ transaktio hyv‰ksym‰ll‰
+	        		// p√§√§t√§ transaktio hyv√§ksym√§ll√§
 	        		conn.commit();
 	        		// sulje yhteys kantaa
 	        		conn.close();
@@ -579,7 +579,7 @@ public class Dao {
 		        		tulosjoukko.close();
 		        		
 		        	}
-		        	else  // asiakkaita ei lˆytynyt
+		        	else  // asiakkaita ei l√∂ytynyt
 		        	{
 		        		lista = null;
 		        	}
@@ -635,7 +635,7 @@ public class Dao {
 			rs.close();  // sulje resultset
 
 		} catch (SQLException e) {
-			// JOTAIN VIRHETT√Ñ TAPAHTUI
+			// JOTAIN VIRHETT√É¬Ñ TAPAHTUI
 			throw e;
 		}
 		catch (Exception e) {
@@ -670,7 +670,7 @@ public class Dao {
 					
 					lkm = lause.executeUpdate();
 					lause.close();
-					if (lkm == 1) { // lis‰ys onnistui
+					if (lkm == 1) { // lis√§ys onnistui
 						conn.commit();
 						conn.close();
 						ok = true;
